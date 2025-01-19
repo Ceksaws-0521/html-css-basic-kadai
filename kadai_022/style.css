@@ -1,0 +1,175 @@
+/* h1, p, bodyの上下左右余白を0に設定 */
+h1, p, body {
+  margin: 0;
+}
+
+/* すべてのp要素とa要素のフォントサイズを20pxに設定 */
+p, a {
+  font-size: 20px;
+}
+
+/* header要素のスタイル */
+header {
+  margin-bottom: 20px; /* 下の余白を20pxに設定 */
+  background-color: rgb(244, 79, 79); /* 背景色を赤系に設定 */
+  text-align: center; /* 中の要素を中央揃えに設定 */
+}
+
+/* h1要素のスタイル */
+header h1 {
+  color: rgb(255, 255, 255); /* 文字色を白に設定 */
+}
+
+/* main要素のスタイル */
+main {
+  padding: 10px; /* main要素内の余白を上下左右10pxに設定 */
+}
+
+/* id名parentのスタイル */
+#parent {
+  display: flex; /* Flexコンテナに設定 */
+  justify-content: space-between; /* 子要素を均等な間隔で配置 */
+}
+
+/* class名contentsのスタイル */
+.contents {
+  border: 3px solid rgb(238, 204, 204); /* 線を指定 */
+  flex-basis: 25%; /* 親要素の25%の幅に設定 */
+  padding: 10px 15px; /* 内側の余白を上下10px、左右15pxに設定 */
+  margin: 20px 0; /* 外側の余白を上下20px、左右0に設定 */
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+/* class名contents内のimg要素のスタイル */
+.contents img {
+  margin: 10px 0; /* 余白を上下10px、左右0に設定 */
+  width: 70%; /* 幅を70%に設定 */
+}
+
+/* h2要素のスタイル */
+.contents h2 {
+  font-size: 25px; /* フォントサイズを25pxに設定 */
+  border-bottom: 3px dotted rgb(236, 122, 122); /* 下線を点線に設定 */
+  position: relative; /* ●記号を相対的に配置するために設定 */
+}
+
+/* h2要素の●記号を追加 */
+.contents h2::before {
+  content: "●"; /* ●記号を表示 */
+  color: rgb(239, 111, 139); /* 記号の色 */
+  top: 0; /* 垂直方向に中央揃え */
+}
+
+/* class名contents内の2番目のp要素の一文字目 */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold; /* 太字 */
+  color: rgb(97, 206, 249); /* 文字色 */
+}
+
+/* main要素のスタイル */
+main {
+  padding: 10px; /* main要素内の余白を上下左右10pxに設定 */
+}
+
+/* id名parentのスタイル */
+#parent {
+  display: flex; /* Flexコンテナに設定 */
+  justify-content: space-between; /* 子要素を均等な間隔で配置 */
+}
+
+/* class名contentsのスタイル */
+.contents {
+  border: 3px solid rgb(238, 204, 204); /* 線を指定 */
+  flex-basis: 25%; /* 親要素の25%の幅に設定 */
+  padding: 10px 15px; /* 内側の余白を上下10px、左右15pxに設定 */
+  margin: 20px 0; /* 外側の余白を上下20px、左右0に設定 */
+  text-align: center; /* 中の要素を中央揃え */
+}
+
+/* class名contents内のimg要素のスタイル */
+.contents img {
+  margin: 10px 0; /* 余白を上下10px、左右0に設定 */
+  width: 70%; /* 幅を70%に設定 */
+}
+
+
+/* class名contents内の2番目のp要素の一文字目 */
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold; /* 太字 */
+  color: rgb(97, 206, 249); /* 文字色 */
+}
+
+/* 全体のスタイル */
+main {
+  padding: 10px; /* main要素内の余白を設定 */
+}
+
+#parent {
+  display: flex; /* Flexboxコンテナ */
+  justify-content: space-between; /* 子要素を均等に配置 */
+}
+
+/* h2とpの基本スタイル */
+h2 {
+  font-size: 25px; /* デフォルトのフォントサイズ */
+}
+
+p {
+  font-size: 20px; /* デフォルトのフォントサイズ */
+}
+
+/* class名contentsのスタイル */
+.contents {
+  border: 3px solid rgb(238, 204, 204); /* 線を指定 */
+  flex-basis: 25%; /* 親要素の幅に応じたサイズ設定 */
+  padding: 10px 15px; /* 内側の余白 */
+  margin: 20px 0; /* 外側の余白 */
+  text-align: center; /* 要素内を中央揃え */
+}
+
+/* 画面幅768px以下のスタイル設定 */
+@media screen and (max-width: 768px) {
+  /* h2のフォントサイズ変更 */
+  h2 {
+    font-size: 30px; /* フォントサイズを30pxに設定 */
+  }
+
+  /* pのフォントサイズ変更 */
+  p {
+    font-size: 25px; /* フォントサイズを25pxに設定 */
+  }
+
+  /* Flexboxコンテナ内の要素を縦並びに変更 */
+  #parent {
+    flex-direction: column; /* 子要素を縦に並べる */
+    align-items: center; /* 必要に応じて中央揃え */
+  }
+
+  /* .contents内のスタイル調整（任意） */
+  .contents {
+    flex-basis: 100%; /* 幅を100%に広げる */
+    margin: 10px 0; /* 上下の余白を調整 */
+  }
+}
+
+/* footer要素のスタイル */
+footer {
+  background-color: rgb(244, 79, 79); /* 背景色を赤系に設定 */
+  text-align: center; /* 中身の要素を中央揃え */
+  padding: 20px; /* 内側の余白を適切に設定 */
+}
+
+/* footer内のa要素のスタイル */
+footer a {
+  color: rgb(255, 255, 255); /* 文字色を白に設定 */
+}
+
+/* footer内の訪問済みリンクのスタイル */
+footer a:visited {
+  color: rgb(193, 234, 251); /* 訪問済みリンクの文字色を淡い青色に変更 */
+}
+
+/* footer内のリンクにマウスカーソルが乗ったときのスタイル */
+footer a:hover {
+  color: rgb(245, 178, 168); /* マウスカーソルが乗ったときの文字色を淡いピンク色に変更 */
+}
